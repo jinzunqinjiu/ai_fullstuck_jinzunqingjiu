@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送花-设计模式</title>
+</head>
+<body>
+    <!-- js代码 -->
+    <script>
+        //弹出警示框
+        //alert('hello') 
+        //js {} 对象字面量
+        const wxc={
+            name: '万先澄',//string
+            age: '21',//number 不分整数和小数，不太适合计算
+            hometown: '南昌',
+            isSingle: true,
+            sendFlower: function(target){
+                target.reciveFlower(wxc);
+            }
+        }
+        const lt={
+            name: '刘涛',
+            age:'21',
+            hometown :'宜春',
+            isSingle: false,
+        }
+        //送花？
+        const xm={
+            name: '小梅',
+            age:'21',
+            hometown :'上饶',
+            xq: 50,
+            reciveFlower: function(sender){
+                 console.log(xm.name+'收到'+sender.name+'送的花')
+                if(xm.xq<80)
+                {
+                    console.log('谢谢，但是我不喜欢') 
+                }
+                else{
+                    consloe.log('海伦斯走一波')
+                }
+            }
+        }
+        const xh={
+            name: '小红',
+            age:'21',
+            hometown :'南昌',
+            reciveFlower: function(sender){
+                //设计模式   代理模式
+           
+            setTimeout(()=>{
+            xm.xq=99;
+            xm.reciveFlower(sender)
+            },3000)
+        }
+            }
+    </script>
+</body>
+</html>
