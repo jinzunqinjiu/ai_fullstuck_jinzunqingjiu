@@ -61,3 +61,9 @@
      this.setData({
         slides:res.data.slides
      })
+- 如何提交小绿块
+     git add .
+     git commit -m '小程序首页'
+     git push orgin main
+
+
