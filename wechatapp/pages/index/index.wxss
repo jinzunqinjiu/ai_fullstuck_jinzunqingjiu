@@ -1,0 +1,40 @@
+/* 继承 */
+ page {
+  font-size: 32rpx;
+  /* rpx是相对的 */
+  line-height: 1.5;
+}
+image {
+  display: block;
+  /* display盒子的性质 */
+  width: 100%;
+}
+.hero {height: 100vh;}
+.hero image {
+  height: 38.2;
+  /* 图片的宽高比，不能模糊，等比例 */
+}
+.hero.white {background-color: #fff;/* css的限定，同时具有hero和white属性 修改别人的代码  方便多人协*/
+}
+.hero .content {
+  padding-top: 10%;
+}
+.hero .content.centered{text-align: center;}
+.hero .header {
+  font-size: 72rpx;
+  font-weight: bold;
+  margin: 0 12% 16rpx;
+  /* 上右下左，顺时针转动 */
+}
+.hero .sub-header {
+  font-size: 32rpx;
+  letter-spacing: 3px;
+  margin-bottom:16rpx;
+  color: rgba(0, 0, 0, 0.85);
+}
+.hero .discription {
+  padding: 0 12%;
+  margin-bottom: 64rpx;
+}
+
+
