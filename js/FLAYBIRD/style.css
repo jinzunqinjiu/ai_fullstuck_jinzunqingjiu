@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapBg{
+    width: 343px;
+    height: 480px;
+    background: url('./img/bg.jpg');
+    position: relative;
+}
+#headTitle {
+    width: 236px;
+    height: 77px;
+    background: url('./img/head.jpg');
+    position:absolute;
+    left: 53px;
+   top: 100px;
+    /* 仅能在定位的时候用 */
+}
+    #headBird {
+        position:absolute;
+        right: 0;
+        top: 25px;
+    }
+    #statrBtn {
+        background: url('./img/start.jpg');
+        position: absolute;
+        width: 85px;
+        height: 29px;
+        left: 129px;
+        top: 250px;
+    }
+    #grassLand1 {
+        width: 343px;
+        height: 14px;background: url('./img/banner.jpg');
+        position: absolute;
+        top: 423px;
+        left: 0;
+    }
+    #grassLand2 {
+        width: 343px;
+        height: 14px;background: url('./img/banner.jpg');
+        position: absolute;
+        top: 423px;
+        left: 100%;
+    }
