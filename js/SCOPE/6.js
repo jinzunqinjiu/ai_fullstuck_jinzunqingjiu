@@ -1,5 +1,5 @@
 function foo(){
-   c=3
+  var c=3
 }
 foo()
 console.log(c)

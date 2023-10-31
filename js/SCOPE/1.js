@@ -1,6 +1,6 @@
 let a= 1
 function  foo(){
-    let a=2
+    // let a=2
     function bar(a)
     {
         console.log(a)
