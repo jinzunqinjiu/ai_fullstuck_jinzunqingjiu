@@ -8,3 +8,5 @@ google  在线NLP平台
 .ipynb  notebook 
 - pipeline 模块  核心模块，启动模块
 水管子    
+
+- pipeline(task,) 核心模块，启动模块

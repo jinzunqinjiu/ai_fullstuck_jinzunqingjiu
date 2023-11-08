@@ -1,0 +1,17 @@
+/* 全局样式的地方 */
+@import"style/reset.wxss";
+/* 公共类 */
+@import"style/button.wxss";
+/* 业务模块 */
+@import"style/action.wxss";
+@import"style/spec.wxss";
+@import"style/cover.wxss";
+@import"style/story.wxss";
+page {
+  background: #f8f8f8;
+}
+.section {
+  /* 相对单位，相当于屏幕的整个高度 */
+  height: 80vh;
+  /* background: green; 背景调试法*/
+}
