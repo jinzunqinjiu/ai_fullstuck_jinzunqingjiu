@@ -16,7 +16,6 @@ class SingleDog{
             SingleDog.instance = new SingleDog()
         }
         return SingleDog.instance
-
     }
     //公有方法 属于实例上的
     show(){

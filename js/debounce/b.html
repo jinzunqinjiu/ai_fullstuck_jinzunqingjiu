@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="unDebounce">
+    <script>
+        const inputA =document.getElementById('unDebounce')
+        function ajax(content)
+        {
+            console.log('ajax request',content)
+        }//执行的太频繁
+        // 服务器就挂了
+        inputA.addEventListener('keyup',function(){
+            //内部逻辑比较复杂
+            let value=this.value
+            //>10行代码，拆分成多个函数
+            debounceAjax(value)
+        })
+        //一段时间内执行一次
+        function debounce(fn,delay)
+        {
+            //闭包  fn delay 自由变量
+            return function(args){
+                // fn()
+                let that=this
+                //定时器的ID
+                clearTimeout(fn.id)
+                fn.id=setTimeout(function(){
+                    fn()
+                },delay)
+
+            }
+        }
+        let debounceAjax =debounce(ajax,2000)
+    </script>
+</body>
+</html>
