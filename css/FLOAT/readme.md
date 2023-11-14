@@ -19,9 +19,9 @@
 - 块级格式化上下文
 
 - 如何创建bfc：
-1.浮动：float：left|| right  父亲也去当浪子去了，父容器有高度
+1.浮动：float：left|| right 
 2.定位：position： abusolute| fixed
-3.行内块：display:inline-block
+3.行内块：display:inline-block  
 4.表格单元：display:table-cell| table-xxx
 5.overflow:auto|hidden|scroll
 6.弹性盒子：display:flex|inline-flex
