@@ -17,4 +17,4 @@ let car2 =new Car('pink')
 car.name='劳斯莱斯'
 console.log(car)
 console.log(car2)
-
+//构造函数创建的多个对象都是独立的
