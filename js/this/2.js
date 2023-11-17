@@ -2,6 +2,7 @@
 // function foo(){
 //     console.log(this.a)
 // }
+
 // function bar(){//bar的词法作用域是window
 //     var a=2
 //     foo()

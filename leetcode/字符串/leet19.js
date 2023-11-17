@@ -1,19 +1,25 @@
 let s='abcd'
 function isPalindrome(s){
-    // const res =s.split('').reverse().join('')
-    // return res===s
-    let i=0,j=s.length-1
-    while(i<=j)
+ let i=0,j=s.length-1
+
+ while(i<j)
+ {
+    if(s[i]===s[j])
     {
-        if(s[i]=s[j])
-        {
-            i++
-        j--
-        }
-         else
+        i++
+        j++ 
+    }
+    else 
     {
-        return false
+        break
     }
+    if(isPalindrome(i+1,j))
+    {
+        return true
     }
-   return true
+    if(isPalindrome(i,j-1))
+    {
+        return true
+    }
+ }
 }

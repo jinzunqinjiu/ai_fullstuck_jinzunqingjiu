@@ -9,3 +9,5 @@ let p =new Person()
 let p2=new Person()
 console.log(p)
 p.say()
+
+

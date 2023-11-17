@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>前端存储</title>
+</head>
+
+<body>
+ <!-- 前端分为那些考点？
+    js
+    html5
+    es6
+    - css3
+    transform
+    - vue react -->
+     <div class="wrapper">
+    <h2> Todo List</h2>
+    <p></p >
+    <ul class="todos">
+    <li>Loading Todos</li>
+    </ul>
+    <form class="add-items">
+    <input type="text" name="item" required placeholder="请输入任务">
+    <input type="submit" value="+ Add Item">
+    </form>
+    </div>
+    <script>
+ //  DOM  编程
+    const oForm = document.querySelector('.add-items')
+    const todosList = document.querySelector('.todos')
+    const todos= JSON.parse(localStorage.getItem('todos'))||[]
+ //事件监听   Dom2级事件     onclick  Dom 0级事件  
+// oForm.addEventListener('submit', function (event) {
+ //     // console.log('123')
+ //     // 获得用户的输入，加人ul列表
+ //     // form表单提交默认提交会刷新页面
+ //     // css  reset
+ //     event.preventDefault()//  阻滞表带提交的效果     Dom的考点  
+
+// })
+oForm.addEventListener('submit', addItem)
+ // this 指向由调用方式决定
+ function addItem(event) {
+ event.preventDefault();
+ // 性能优化--> DOM树状结构  
+ // console.log(this)
+ const text = this.querySelector('[name = item]').value
+ if(!text) return;
+// console.log(text)
+ const item = {
+ text,
+ done: false
+ }
+//  todosList.innerHTML += `
+//  <li>
+//  ${item.text}- ${item.done ? '已完成' : '未完成'} 
+//     </li>`
+todos.push(item)//本地存储
+window.localStorage.setItem('todos',JSON.stringify(todos))
+populateList(todos,todosList)
+    this.reset()
+ }
+ function populateList(todos = [], todosList) {
+    todosList.innerHTML = '';
+    todos.forEach((todo, i) => {
+        todosList.innerHTML += `
+            <li>
+                <input type="checkbox" data-index=${i} id="item${i}" ${todo.done ? 'checked' : ''}>
+                <label for="item${i}">${todo.text}</label>
+            </li>
+        `
+    })
+
+}
+if(todos.length>0)
+{
+    //复用问题，养成良好的编程素养
+    populateList(todos,todosList)
+}
+ </script>
+</body>
+
+</html>
