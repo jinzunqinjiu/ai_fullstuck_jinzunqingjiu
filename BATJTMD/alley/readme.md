@@ -41,4 +41,13 @@ watch 监听styl 文件的改变，自动编译css
     - DOM性能不太好 缓存dom元素
     - script标签 src属性加载一个资源，同步，会阻塞html下载进程 一定要放在头部，放在css之前
 
+- 后端素养
+    - requests python的http请求库
+       url(ip) + get 请求 响应式？ 服务器给你返回的财经地址首页的html的二进制流
+       response.text html的文本信息
+    - parse 一下，BeautifulSoup()
+    python最擅长 文本，数据 解析 .cvs  .sql
+    - find-all dom查询 内存中查找
+    人生苦短，我用python  link   for link in links if"/news" in link and
 
+    - 随机功能
