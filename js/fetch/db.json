@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "胡总"
+    },
+    {
+      "id": 2,
+      "title": "ajax",
+      "author": "陈总"
+    },
+    {
+      "title": "你不知道的Javascript",
+      "author": "李总",
+      "id": 3
+    },
+    {
+      "title": "霸道总裁爱上我",
+      "author": "戴总",
+      "id": 4
+    },
+    {
+      "title": "霸道美女爱上我",
+      "author": "戴总",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}
