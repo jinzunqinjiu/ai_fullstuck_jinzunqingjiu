@@ -22,4 +22,3 @@ function bubbleSort(arr) {
     const arr = [5, 8, 6, 3, 9, 2, 1, 7]
     bubbleSort(arr)
     console.log(bubbleSort(arr))
-    console.log( console.timeEnd('改进冒泡顺序'))
