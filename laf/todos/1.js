@@ -9,6 +9,8 @@
     //         console.log('end')
     //     })
     // 异步变同步，有利于流程控制
+    //await 跟一个promise实例 同步等待被resolve
+    //代码的编写顺序等于执行顺序
     const res=await fetch('https://icbib2.laf.run/get-list')
     const { data } = await res.json()
     console.log(data)

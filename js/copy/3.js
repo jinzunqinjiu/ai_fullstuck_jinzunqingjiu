@@ -1,6 +1,12 @@
 let obj={
     name:'li',
-    age:18
+    age:18,
+    a:{
+        n:1
+    },
+    b:null,
+    d:function(){},
+    e:Symbol('hello')
+
 }
-let str=JOSN.stringif(obj)
-console.log(JOSN.parse(str))
+let obj2=JSON.parse(JSON.stringify(obj))

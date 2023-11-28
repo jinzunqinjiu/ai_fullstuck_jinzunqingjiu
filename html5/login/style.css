@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.login{
+    padding: 0 45px;
+    height: 100vh;
+    background-color: red;
+    position: relative;
+    overflow: auto;
+}
+.login .login__hd{
+	color: rgba(255, 255, 255, 1);
+	font-size: 18px;
+    text-align: center;
+    margin-top: 18px;
+}
+ .logo{
+    text-align: center; /* 水平居中 */
+    margin-top: 75px;
+}
+.login__wrap{
+    font-size:16px ;
+    color: white;
+    text-align: center;
+    margin-top: 160px;
+}
+.login__wrap-b{
+    font-size: 24px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.login__wrap-t{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+.button{
+ 
+    font-size: 16px;
+    margin-top: 79px;
+    text-align: center;
+}
+.button{
+    
+        width: 271px;
+        height: 36px;
+        left: 50%;
+        top: 583px;
+        color: rgba(80, 80, 80, 1);
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 16px;
+        font-size: 16px;
+        text-align: center;
+}
+.tanchu{
+    position: absolute;
+    left: 50%;
+	color: rgba(80, 80, 80, 1);
+	background-color: rgba(0, 0, 0, 1);
+	border-radius: 14px;
+	font-size: 16px;
+    opacity: 0.7;
+    margin-top: 50px;
+    display: null;
+    
+}
+.img{
+    text-align: center;
+
+}
+.comtent{
+    text-align: center;
+    
+}
+
+

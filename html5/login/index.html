@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="login__hd">网易云音乐</div>
+        <div class="logo"><img src="./图片素材/1.png " width="129px" height="139px" alt=""></div>
+        <div class="login__wrap">
+
+            <div class="login__wrap-t">
+                <div class="labal">账号</div>
+                <div class="username">
+                    <input type="text" value="" id="username" placeholder="输入手机号">
+                </div>
+            </div>
+
+            <div class="login__wrap-b">
+                <div class="mima">密码</div>
+                <div class="password">
+                    <input type="password" value="" id="password" placeholder="输入密码">
+                </div>
+
+            </div>
+
+        </div>
+        <div class="button" id="btn">
+            登录
+        </div>
+        <div class="tanchu" id="chu">
+           <div class="img"><img src="./图片素材/图片 234.png" alt="" width="70px" height="50px"></div>
+            <div class="comtent">登录成功</div>
+        </div>
+    </div>
+    <script>
+        let btn = document.getElementById('btn')
+        let username = document.getElementById('username')
+        let password = document.getElementById('password')
+
+        btn.addEventListener('click', () => {
+            fetch(`http://192.168.31.26:3000/login?username=${username.value}&password=${password.value}`)
+                .then(
+                    (data) => {
+                        return data.json
+                    })
+                .then((res) => {
+                    console.log(res)
+                    setTimeout(()=>{
+                     let a=document.getElementById('chu')
+                        // a.style.disply=block
+                    }, 2000)
+                    setTimeout
+                })
+        })
+    </script>
+</body>
+
+</html>
