@@ -11,7 +11,7 @@ function EditInPlace(id, parent, value) {
     this.parentElement = parent || document.body;
     this.value = value || 'default value';
     this.createElement(this.id);
-    this.attachEvents();
+    this.attachEvents(); 
 }
 
 EditInPlace.prototype = {

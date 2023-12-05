@@ -19,7 +19,7 @@ toString() 在js中有多个版本：
 
 ## 对象转字符串    ToPrimitive(string string)
 1.判断obj是基本类型，则返回
-2.否则 调用 valueof()方法
+2.否则 调用 toString()方法
 3.否则 调用 valueof()方法
 4.否则 报类型错误
 
@@ -27,5 +27,16 @@ toString() 在js中有多个版本：
 ## 对象转数字       ToPrimitive(string number)
 1.判断obj是基本类型，则返回
 2.否则 调用 valueof()方法
-3.否则 调用 valueof()方法
+3.否则 调用 toString()方法
 4.否则 报类型错误
+
+##  一元运算符  +
+
+
+## 二元运算符  +
+lprim=ToPrimitive(v1)
+rprim=ToPrimitive(v2)
+v1+v2===lprim+rlprim
+1.如果lprim是字符串 或者rpim是字符串，则返回将不是字符串的一方转换为字符串，再进行拼接
+
+## ==相等 1=true  ===  恒等
