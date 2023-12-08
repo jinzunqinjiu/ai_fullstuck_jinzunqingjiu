@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="app"></h1>
+    <template id="my-id">
+        <h2 @click="hide" v-show="show">{{show}}</h2>
+        <!-- <h2 v-if="status===2">{{time2}}</h2>
+        <h2 v-if="status===3">{{time3}}</h2>
+        <button @click="change">切换</button> -->
+    </template>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+        const app = Vue.createApp({
+            template: '#my-id',
+
+            data() {
+                return {
+                    time: '2023-12-08',
+                    time2: '2023年 12月 08号',
+                    time3: '2023/12/08',
+                    status: 1,
+                    show:'show'
+                }
+
+            },
+            methods: {
+                change() {
+                    if(this.status===3){
+                        this.statu=0
+                    }
+                    this.status++
+                },
+                hide(){
+                    this.show=false
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+
+</body>
+
+</html>
