@@ -10,10 +10,7 @@
 <body>
     <h1 id="app"></h1>
     <template id="my-id">
-        <h2 @click="hide" v-show="show">{{show}}</h2>
-        <!-- <h2 v-if="status===2">{{time2}}</h2>
-        <h2 v-if="status===3">{{time3}}</h2>
-        <button @click="change">切换</button> -->
+        <h2 @click="hide" v-if="l">{{l}}</h2>
     </template>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -28,7 +25,7 @@
                     time2: '2023年 12月 08号',
                     time3: '2023/12/08',
                     status: 1,
-                    show:'show'
+                    l:'show'
                 }
 
             },
@@ -40,14 +37,11 @@
                     this.status++
                 },
                 hide(){
-                    this.show=false
+                    this.l=false
                 }
             }
         })
-
         app.mount('#app')
     </script>
-
 </body>
-
 </html>
