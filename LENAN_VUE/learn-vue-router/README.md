@@ -7,7 +7,7 @@
 
 通过特殊的手段来实现，每次只让一个代码生效，每次只让一个代码片段生效，也就模拟成了多个html一样的效果。
 
-
+   
 
 # vue-router
 特殊的手段
@@ -22,4 +22,4 @@
  1.router-link
  2.编程式路由跳转   this.$router.push()
  3.路由传参  {path:"xxx",query:{}}
-            {name:"xxx",params:{}}
+             {name:"xxx",params:{}}
