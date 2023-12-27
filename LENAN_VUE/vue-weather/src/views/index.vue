@@ -16,7 +16,7 @@
                 <span>空气湿度：{{ mapData.humidity }}</span>
             </div>
         </div>
-        <div class="future" v-if="futureData.length > 0">
+        <div class="future" v-if="futureData.length > 0">   
             <div class="group">
                 明天：
                 <span class="tm">白天：{{ futureData[0].dayTemp }}℃ 北风 4</span>
