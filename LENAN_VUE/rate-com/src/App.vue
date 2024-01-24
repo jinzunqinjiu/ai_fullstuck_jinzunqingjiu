@@ -2,7 +2,7 @@
 //响应式思想
 //vue3的语法    ref响应式
 //vue 主要工作是开发一个组件
-import Rate from './components/Rate.vue'//分数变了会自动更新s
+import Rate from './components/Rate.vue'//分数变了会自动更新
 //组件化思想
 import { ref } from 'vue'
 let score = ref(3)

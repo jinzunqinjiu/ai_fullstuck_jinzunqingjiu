@@ -107,7 +107,6 @@ onMounted(async () => {
   }
 
   const { data } = await getHome()
-  // console.log(data);
   state.swiperList = data.carousels
   state.newGoodsList = data.newGoodses
   state.hotGoodsList = data.hotGoodses

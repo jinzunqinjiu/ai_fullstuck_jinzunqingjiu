@@ -1,0 +1,23 @@
+{
+  "id": "4323958",
+  "name": "music",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6527717",
+      "name": "小猫",
+      "font_class": "xiaomao-",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "36267329",
+      "name": "小猫-copy",
+      "font_class": "kitty",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

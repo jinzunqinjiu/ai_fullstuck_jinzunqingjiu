@@ -1,11 +1,12 @@
 <template>
   <div class="simple-header">
-    <van-icon name="arrow-left" v-if="back" @click="goBack" />
+    <van-icon name="arrow-left" v-if="back" @click="goBack"/>
     <i v-else>&nbsp;</i>
-    <div class="simple-header-name">{{ title }}</div>
+    <div class="simple-header-name">{{title}}</div>
     <van-icon name="ellipsis" />
   </div>
-  <div class="block"></div>
+  <div class="block">
+  </div>
 </template>
 
 <script setup>
@@ -18,7 +19,6 @@ defineProps({
   }
 })
 
-
 const router = useRouter()
 
 const goBack = () => {
@@ -27,7 +27,7 @@ const goBack = () => {
 </script>
 
 <style lang="less" scoped>
-.simple-header {
+.simple-header{
   display: flex;
   font-size: 18px;
   height: 44px;
@@ -43,8 +43,7 @@ const goBack = () => {
   z-index: 999;
   background-color: #fff;
 }
-
-.block {
+.block{
   height: 44px;
 }
 </style>
