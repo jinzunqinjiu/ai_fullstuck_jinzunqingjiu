@@ -40,8 +40,9 @@
 		<!-- xxx雷达歌单 -->
 		<songList :list="state.personalizedList" title="蜗牛的雷达歌单"/>
 		
+		<musicPlayer bottom="100rpx"/>
 	</view>
-</template>
+</template>d
 
 <script setup>
 import { apiGetBanner, apiGetBall, apiGetRecommendList, apiGetRecommendSongs, apiGetPersonalizedList } from '@/api/index.js'
@@ -141,7 +142,7 @@ const getPersonalizedList = async() => {
 				height: 70rpx;
 				margin: 0 auto;
 				margin-bottom: 14rpx;
-				background-color: #d81e06;
+				background-color: $uni-primary-color;
 				border-radius: 50%;
 				image{
 					width: 100%;

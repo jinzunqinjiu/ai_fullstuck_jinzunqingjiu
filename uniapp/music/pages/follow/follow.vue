@@ -2,19 +2,24 @@
 	<view class="follow">
 		<wyheader icon="plus-filled">
 			<template v-slot:content>
-				动态
+				<text>动态</text>
 			</template>
 		</wyheader>
 		
+		关注
 	</view>
 </template>
 
-<script setup>
-	
+<script>
+	export default {
+		data() {
+			return {
+				
+			};
+		}
+	}
 </script>
 
 <style lang="scss">
-.follow{
-	text-align: center;
-}
+
 </style>

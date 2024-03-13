@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + Vue</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- VUE 项目是一个应用，不是几个小文件 运行起来是非常复杂的-->
+  模块化组织文件
+  <!-- js早期   模块化能力弱   node require commonjs ->es6 import ESModule
+    vite(快) 是一个现代前端应用的构建工具（Webpack区别   require 笨重  慢），
+    它基于 ES2015(ES6) 的模块系统，使用简单且快速。
+    使用了新的Es标准
+    无需依赖其他工具，同时支持开发环境和生产环境的构造 -->
+  <!-- mian.js是单点入口 -->
+  type module 告诉浏览器以以ESmodule方式来解析文件的依赖 import
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		音乐
+		播客
 	</view>
 </template>
 
