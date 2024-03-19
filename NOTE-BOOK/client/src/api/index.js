@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { showFailToast } from 'vant';
 
 
 
@@ -16,10 +15,11 @@ axios.interceptors.response.use((res) => {
         showFailToast('服务器异常');
     } else {
         if (res.data.code !== '8000') {
-            showFailToast('res.data.msg');
+            showFailToast(res.data.msg);
+            console.log(res.data);
             return Promise.reject(res)
         }
-        return res
+        return res.data
     }
 })
 export default axios
