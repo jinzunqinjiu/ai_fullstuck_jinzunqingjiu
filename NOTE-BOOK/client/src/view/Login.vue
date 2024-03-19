@@ -1,58 +1,61 @@
 <template>
-<div class="login">
+  <div class="login">
     <h1>登录</h1>
     <div class="login-wrapper">
-        <div class="avatar">
-            <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.xfAkmCUAf3_xmlbGKOXi-gAAAA?w=170&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+      <div class="avatar">
+        <img
+          src="https://tse2-mm.cn.bing.net/th/id/OIP-C.xfAkmCUAf3_xmlbGKOXi-gAAAA?w=170&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          alt="">
+      </div>
+      <van-form @submit="onSubmit">
+        <van-cell-group inset>
+          <van-field v-model="username" name="username" label="用户名" placeholder="用户名" />
+          <van-field v-model="password" type="password" name="password" label="密码" placeholder="密码" />
+        </van-cell-group>
+        <div style="margin: 16px;">
+          <van-button round block type="primary" native-type="submit">
+            提交
+          </van-button>
         </div>
-        <van-form @submit="onSubmit">
-  <van-cell-group inset>
-    <van-field
-      v-model="username"
-      name="username"
-      label="用户名"
-      placeholder="用户名"
-    />
-    <van-field
-      v-model="password"
-      type="password"
-      name="password"
-      label="密码"
-      placeholder="密码"
-    />
-  </van-cell-group>
-  <div style="margin: 16px;">
-    <van-button round block type="primary" native-type="submit">
-      提交
-    </van-button>
-  </div>
-</van-form>
+      </van-form>
     </div>
-
-</div>
+    <p class="register" @click="goRegister">新用户点击注册</p>
+  </div>
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 import axios from '@/api'
-
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 const username = ref('')
 const password = ref('')
 
-const onSubmit =async (values) => {
-  console.log(values);
- const res= await axios.post('/user/login',{
-    username: values.username,
-    password: values.password
-  })
-  console.log(res);
+const onSubmit = async (values) => {
+  try {
+    console.log(values);
+    const res = await axios.post('/user/login', {
+      username: values.username,
+      password: values.password
+    })
+    localStorage.setItem('userInfo', JSON.stringify(res.data))
+    router.push('/noteClass')
+  }
+  catch (e) {
+    console.log(e);
+  }
 
 }
+
+const goRegister = () => {
+  router.push('/register')
+}
+
 </script>
 
 <style lang="less" scoped>
-.login{
+.login {
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -60,13 +63,15 @@ const onSubmit =async (values) => {
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  h1{
+
+  h1 {
     height: 0.6933rem;
     text-align: center;
     margin-top: 1.12rem;
     font-size: 0.48rem;
   }
-  .login-wrapper{
+
+  .login-wrapper {
     width: 7.44rem;
     height: 10.77rem;
     border: 1px solid rgba(187, 187, 187, 1);
@@ -74,18 +79,21 @@ const onSubmit =async (values) => {
     margin-top: 1.7rem;
     border-radius: 0.3rem;
     box-shadow: 0 0 0.533rem 0 rgba(170, 170, 170, 1);
-    .avatar{
+
+    .avatar {
       width: 2.4rem;
       height: 2.4rem;
       overflow: hidden;
       border-radius: 50%;
       margin: 1rem auto 0.77rem;
-      img{
+
+      img {
         width: 100%;
       }
     }
   }
-  .register{
+
+  .register {
     position: absolute;
     bottom: 30px;
     width: 80%;
@@ -101,7 +109,7 @@ const onSubmit =async (values) => {
 </style>
 
 <style>
-.van-cell__title.van-field__label{
+.van-cell__title.van-field__label {
   width: 45px;
 }
 </style>
