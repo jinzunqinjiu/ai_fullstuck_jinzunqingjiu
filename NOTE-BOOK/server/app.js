@@ -5,6 +5,7 @@ const cors = require('koa2-cors')//跨域
 
 
 const user = require('./routes/user.js')
+const node = require('./routes/node.js')
 
 
 app.use(cors())
@@ -15,6 +16,7 @@ app.use(bodyParser())
 
 
 app.use(user.routes(), user.allowedMethods())
+app.use(node.routes(), user.allowedMethods())
 
 // const main = (ctx) => {
 //     console.log(ctx.request.body);
