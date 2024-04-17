@@ -1,18 +1,12 @@
-import React from 'react';
-import State from './components/State.jsx'
-import Effect from './components/Effect.jsx';
-const App = props => {//来判断自建接受的值的类型
+import Con from './components/__context'
+import Context from './components/Context'
+import TodoList from './components/todo/TodoList'
+// const Con = createContext()
+
+const App = () => {
   return (
-    <div>
-      hellow world
-      {/* <State></State> */}
-      <Effect></Effect>
-    </div>
+    <TodoList></TodoList>
   );
-};
-
-App.propTypes = {
-
 };
 
 export default App;

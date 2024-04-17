@@ -24,3 +24,6 @@
 
 - 卸载阶段
 1.conponentWillUnmount
+
+3.useRef  在函数组件中获取dom结构
+4.useContext   createContext创建一个上下文对象，用于父组件提供数据，子组件用过useContent(context)来接受数据
